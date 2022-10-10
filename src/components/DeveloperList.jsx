@@ -18,7 +18,10 @@ const DeveloperList = () => {
                 {devState?.map((dev) => {
                     return (
                         <div key={dev.id}>
-                            <li >{`${dev.language}  :  ${dev.name}`}</li>
+                            <span >{dev.name.toUpperCase()}</span><br />
+                            <span >uses the {dev.language} language!</span><br />
+                            <span >and specializes in {dev.technology}</span><br />
+                            <span >this hero lives on {dev.drink} and {dev.food}</span><br />
                             <button onClick={() => deleteDev(dev.id)}>delete</button>
                         </div>
                     )
